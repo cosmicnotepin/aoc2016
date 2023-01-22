@@ -10,32 +10,27 @@ template <typename T> int sgn(T val) {
 }
 
 
-string run1(string const filename)
+string run1(ifstream ifs)
 {
-    ifstream ifs {filename};
     for (string line; getline(ifs, line);) {
     }
     return to_string(0);
 }
 
-string run2(string const filename)
+string run2(ifstream ifs)
 {
     return to_string(0);
 }
 
 int main(int argc, char** argv)
 {
-    for (auto [p,fun] : (pair<string, decltype(&run1)>[]) {{"p1: ", run1}, {"p2: ", run2}}) {
-        cout<<p<<'\n';
-        for (auto inp : {"tinput", "input"}) {
-            auto start = chrono::steady_clock::now();
-            auto res = fun(inp);
-            auto end = chrono::steady_clock::now();
-            chrono::duration<double> time_s = end-start;
-            cout<<inp<<": "<<res<<'\n';
-            cout<<fixed;
-            cout.precision(6);
-            cout<<"time: "<<time_s.count()<<'\n';
-        }
-    }
+    string (*funs[])(ifstream) = {&run1, &run2};
+    auto start = chrono::steady_clock::now();
+    auto res = funs[atoi(argv[1])-1](ifstream {argv[2]});
+    auto end = chrono::steady_clock::now();
+    chrono::duration<double> time_s = end-start;
+    cout<<"result: "<<res<<'\n';
+    cout<<fixed;
+    cout.precision(6);
+    cout<<"time: "<<time_s.count()<<'\n';
 }

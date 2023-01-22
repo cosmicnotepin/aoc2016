@@ -79,17 +79,13 @@ string run2(ifstream ifs)
 
 int main(int argc, char** argv)
 {
-    for (auto [p,fun] : (pair<string, decltype(&run1)>[]) {{"p1: ", run1}, {"p2: ", run2}}) {
-        cout<<p<<'\n';
-        for (auto inp : {"tinput", "input"}) {
-            auto start = chrono::steady_clock::now();
-            auto res = fun(ifstream {inp});
-            auto end = chrono::steady_clock::now();
-            chrono::duration<double> time_s = end-start;
-            cout<<inp<<": "<<res<<'\n';
-            cout<<fixed;
-            cout.precision(6);
-            cout<<"time: "<<time_s.count()<<'\n';
-        }
-    }
+    string (*funs[])(ifstream) = {&run1, &run2};
+    auto start = chrono::steady_clock::now();
+    auto res = funs[atoi(argv[1])-1](ifstream {argv[2]});
+    auto end = chrono::steady_clock::now();
+    chrono::duration<double> time_s = end-start;
+    cout<<"result: "<<res<<'\n';
+    cout<<fixed;
+    cout.precision(6);
+    cout<<"time: "<<time_s.count()<<'\n';
 }
