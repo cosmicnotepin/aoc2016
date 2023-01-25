@@ -1,4 +1,5 @@
 from timeit import default_timer as timer
+import sys
 
 def main1(f):
     line = f.read()
