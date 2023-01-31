@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+if [  ${1:2:1} = "t" ]; then
+    filename="tinput"
+else
+    filename="input"
+fi 
+echo part ${1:1:1} $filename
+
+if [ ${1:0:1} = "p" ]; then
+    echo
+    echo python3 p.py ${1:1:1} $filename
+    echo
+    python3 p.py ${1:1:1} $filename
+else
+    if [ ${#1} -eq 4 ]; then
+        echo compiling -O3
+        echo
+        g++ -O3 -std=c++20 md5.cpp main.cpp -o run.out && ./run.out ${1:1:1} $filename
+    else
+        echo compiling -g
+        echo
+        g++ -g -Wall -fno-omit-frame-pointer -std=c++20 md5.cpp main.cpp -o run.out && ./run.out ${1:1:1} $filename
+    fi
+fi
+    
