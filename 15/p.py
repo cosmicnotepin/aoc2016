@@ -31,21 +31,6 @@ def chin_rem(f, part2):
 
 def main1(f):
     return chin_rem(f, False)
-    ais = []
-    mis = []
-    wheels = []
-    for line in f:
-        no, mi, t, pos = map(int, (re.findall('\d+', line)))
-        wheels.append((no, mi, t, pos))
-        ais.append((mi - pos-no)%mi)
-        mis.append(mi)
-
-    M = prod(mis)
-    Mis = [M//m for m in mis]
-    siMis = [egcd(mi, Mi)[2] * Mi for mi,Mi in zip(mis, Mis)]
-    t = sum(ai*siMi for ai, siMi in zip(ais, siMis)) % M
-
-    return str(t)
 
 
 def main2(f):
