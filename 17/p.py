@@ -7,7 +7,7 @@ def bfs (x, y, path, f, part2):
     doors = {'U': (0,-1), 'D': (0,1), 'L': (-1,0), 'R': (1,0)}
     todo = [(x,y,path)]
     m_pth_len = 0
-    while len(todo) > 0:
+    while todo:
         x,y,pth = todo.pop(0)
         hsh = md5((salt + pth).encode('utf-8')).hexdigest()
         for (key,(xc, yc)), hshc in zip(doors.items(), hsh):
