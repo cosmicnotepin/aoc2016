@@ -1,0 +1,406 @@
+part 2 input
+
+python3 p.py 2 input
+
+pw : ['b', 'd', 'f', 'h', 'g', 'e', 'c', 'a']
+line: move position 0 to position 5
+pw : ['e', 'b', 'd', 'f', 'h', 'g', 'c', 'a']
+
+pw : ['e', 'b', 'd', 'f', 'h', 'g', 'c', 'a']
+line: rotate right 2 steps
+pw : ['d', 'f', 'h', 'g', 'c', 'a', 'e', 'b']
+
+pw : ['d', 'f', 'h', 'g', 'c', 'a', 'e', 'b']
+line: move position 1 to position 3
+pw : ['d', 'g', 'f', 'h', 'c', 'a', 'e', 'b']
+
+pw : ['d', 'g', 'f', 'h', 'c', 'a', 'e', 'b']
+line: swap position 4 with position 1
+pw : ['d', 'c', 'f', 'h', 'g', 'a', 'e', 'b']
+
+pw : ['d', 'c', 'f', 'h', 'g', 'a', 'e', 'b']
+line: rotate left 1 step
+pw : ['b', 'd', 'c', 'f', 'h', 'g', 'a', 'e']
+
+pw : ['b', 'd', 'c', 'f', 'h', 'g', 'a', 'e']
+line: reverse positions 1 through 3
+pw : ['b', 'f', 'c', 'd', 'h', 'g', 'a', 'e']
+
+pw : ['b', 'f', 'c', 'd', 'h', 'g', 'a', 'e']
+line: move position 1 to position 4
+pw : ['b', 'h', 'f', 'c', 'd', 'g', 'a', 'e']
+
+pw : ['b', 'h', 'f', 'c', 'd', 'g', 'a', 'e']
+line: reverse positions 1 through 3
+pw : ['b', 'c', 'f', 'h', 'd', 'g', 'a', 'e']
+
+pw : ['b', 'c', 'f', 'h', 'd', 'g', 'a', 'e']
+line: reverse positions 0 through 2
+pw : ['f', 'c', 'b', 'h', 'd', 'g', 'a', 'e']
+
+pw : ['f', 'c', 'b', 'h', 'd', 'g', 'a', 'e']
+line: swap position 5 with position 7
+pw : ['f', 'c', 'b', 'h', 'd', 'e', 'a', 'g']
+
+pw : ['f', 'c', 'b', 'h', 'd', 'e', 'a', 'g']
+line: reverse positions 0 through 1
+pw : ['c', 'f', 'b', 'h', 'd', 'e', 'a', 'g']
+
+pw : ['c', 'f', 'b', 'h', 'd', 'e', 'a', 'g']
+line: rotate based on position of letter h
+pw : ['b', 'h', 'd', 'e', 'a', 'g', 'c', 'f']
+
+pw : ['b', 'h', 'd', 'e', 'a', 'g', 'c', 'f']
+line: rotate left 1 step
+pw : ['f', 'b', 'h', 'd', 'e', 'a', 'g', 'c']
+
+pw : ['f', 'b', 'h', 'd', 'e', 'a', 'g', 'c']
+line: swap position 1 with position 5
+pw : ['f', 'a', 'h', 'd', 'e', 'b', 'g', 'c']
+
+pw : ['f', 'a', 'h', 'd', 'e', 'b', 'g', 'c']
+line: rotate based on position of letter h
+pw : ['g', 'c', 'f', 'a', 'h', 'd', 'e', 'b']
+
+pw : ['g', 'c', 'f', 'a', 'h', 'd', 'e', 'b']
+line: reverse positions 1 through 7
+pw : ['g', 'b', 'e', 'd', 'h', 'a', 'f', 'c']
+
+pw : ['g', 'b', 'e', 'd', 'h', 'a', 'f', 'c']
+line: swap letter b with letter h
+pw : ['g', 'h', 'e', 'd', 'b', 'a', 'f', 'c']
+
+pw : ['g', 'h', 'e', 'd', 'b', 'a', 'f', 'c']
+line: rotate left 3 steps
+pw : ['a', 'f', 'c', 'g', 'h', 'e', 'd', 'b']
+
+pw : ['a', 'f', 'c', 'g', 'h', 'e', 'd', 'b']
+line: rotate based on position of letter b
+pw : ['h', 'e', 'd', 'b', 'a', 'f', 'c', 'g']
+
+pw : ['h', 'e', 'd', 'b', 'a', 'f', 'c', 'g']
+line: swap letter h with letter f
+pw : ['f', 'e', 'd', 'b', 'a', 'h', 'c', 'g']
+
+pw : ['f', 'e', 'd', 'b', 'a', 'h', 'c', 'g']
+line: swap letter f with letter c
+pw : ['c', 'e', 'd', 'b', 'a', 'h', 'f', 'g']
+
+pw : ['c', 'e', 'd', 'b', 'a', 'h', 'f', 'g']
+line: swap letter b with letter a
+pw : ['c', 'e', 'd', 'a', 'b', 'h', 'f', 'g']
+
+pw : ['c', 'e', 'd', 'a', 'b', 'h', 'f', 'g']
+line: rotate left 2 steps
+pw : ['f', 'g', 'c', 'e', 'd', 'a', 'b', 'h']
+
+pw : ['f', 'g', 'c', 'e', 'd', 'a', 'b', 'h']
+line: rotate based on position of letter c
+pw : ['b', 'h', 'f', 'g', 'c', 'e', 'd', 'a']
+
+pw : ['b', 'h', 'f', 'g', 'c', 'e', 'd', 'a']
+line: rotate based on position of letter d
+pw : ['b', 'h', 'f', 'g', 'c', 'e', 'd', 'a']
+
+pw : ['b', 'h', 'f', 'g', 'c', 'e', 'd', 'a']
+line: reverse positions 1 through 5
+pw : ['b', 'e', 'c', 'g', 'f', 'h', 'd', 'a']
+
+pw : ['b', 'e', 'c', 'g', 'f', 'h', 'd', 'a']
+line: move position 5 to position 0
+pw : ['e', 'c', 'g', 'f', 'h', 'b', 'd', 'a']
+
+pw : ['e', 'c', 'g', 'f', 'h', 'b', 'd', 'a']
+line: swap letter f with letter a
+pw : ['e', 'c', 'g', 'a', 'h', 'b', 'd', 'f']
+
+pw : ['e', 'c', 'g', 'a', 'h', 'b', 'd', 'f']
+line: rotate left 7 steps
+pw : ['c', 'g', 'a', 'h', 'b', 'd', 'f', 'e']
+
+pw : ['c', 'g', 'a', 'h', 'b', 'd', 'f', 'e']
+line: reverse positions 1 through 3
+pw : ['c', 'h', 'a', 'g', 'b', 'd', 'f', 'e']
+
+pw : ['c', 'h', 'a', 'g', 'b', 'd', 'f', 'e']
+line: swap position 0 with position 2
+pw : ['a', 'h', 'c', 'g', 'b', 'd', 'f', 'e']
+
+pw : ['a', 'h', 'c', 'g', 'b', 'd', 'f', 'e']
+line: swap letter a with letter c
+pw : ['c', 'h', 'a', 'g', 'b', 'd', 'f', 'e']
+
+pw : ['c', 'h', 'a', 'g', 'b', 'd', 'f', 'e']
+line: rotate based on position of letter b
+pw : ['e', 'c', 'h', 'a', 'g', 'b', 'd', 'f']
+
+pw : ['e', 'c', 'h', 'a', 'g', 'b', 'd', 'f']
+line: swap letter g with letter b
+pw : ['e', 'c', 'h', 'a', 'b', 'g', 'd', 'f']
+
+pw : ['e', 'c', 'h', 'a', 'b', 'g', 'd', 'f']
+line: reverse positions 0 through 3
+pw : ['a', 'h', 'c', 'e', 'b', 'g', 'd', 'f']
+
+pw : ['a', 'h', 'c', 'e', 'b', 'g', 'd', 'f']
+line: rotate based on position of letter g
+pw : ['e', 'b', 'g', 'd', 'f', 'a', 'h', 'c']
+
+pw : ['e', 'b', 'g', 'd', 'f', 'a', 'h', 'c']
+line: rotate right 1 step
+pw : ['b', 'g', 'd', 'f', 'a', 'h', 'c', 'e']
+
+pw : ['b', 'g', 'd', 'f', 'a', 'h', 'c', 'e']
+line: swap position 7 with position 5
+pw : ['b', 'g', 'd', 'f', 'a', 'e', 'c', 'h']
+
+pw : ['b', 'g', 'd', 'f', 'a', 'e', 'c', 'h']
+line: swap position 3 with position 4
+pw : ['b', 'g', 'd', 'a', 'f', 'e', 'c', 'h']
+
+pw : ['b', 'g', 'd', 'a', 'f', 'e', 'c', 'h']
+line: rotate left 4 steps
+pw : ['f', 'e', 'c', 'h', 'b', 'g', 'd', 'a']
+
+pw : ['f', 'e', 'c', 'h', 'b', 'g', 'd', 'a']
+line: swap letter e with letter a
+pw : ['f', 'a', 'c', 'h', 'b', 'g', 'd', 'e']
+
+pw : ['f', 'a', 'c', 'h', 'b', 'g', 'd', 'e']
+line: reverse positions 3 through 4
+pw : ['f', 'a', 'c', 'b', 'h', 'g', 'd', 'e']
+
+pw : ['f', 'a', 'c', 'b', 'h', 'g', 'd', 'e']
+line: swap letter b with letter d
+pw : ['f', 'a', 'c', 'd', 'h', 'g', 'b', 'e']
+
+pw : ['f', 'a', 'c', 'd', 'h', 'g', 'b', 'e']
+line: move position 3 to position 4
+pw : ['f', 'a', 'c', 'h', 'd', 'g', 'b', 'e']
+
+pw : ['f', 'a', 'c', 'h', 'd', 'g', 'b', 'e']
+line: move position 7 to position 2
+pw : ['f', 'a', 'h', 'd', 'g', 'b', 'e', 'c']
+
+pw : ['f', 'a', 'h', 'd', 'g', 'b', 'e', 'c']
+line: rotate left 3 steps
+pw : ['b', 'e', 'c', 'f', 'a', 'h', 'd', 'g']
+
+pw : ['b', 'e', 'c', 'f', 'a', 'h', 'd', 'g']
+line: reverse positions 5 through 7
+pw : ['b', 'e', 'c', 'f', 'a', 'g', 'd', 'h']
+
+pw : ['b', 'e', 'c', 'f', 'a', 'g', 'd', 'h']
+line: reverse positions 4 through 5
+pw : ['b', 'e', 'c', 'f', 'g', 'a', 'd', 'h']
+
+pw : ['b', 'e', 'c', 'f', 'g', 'a', 'd', 'h']
+line: swap position 4 with position 6
+pw : ['b', 'e', 'c', 'f', 'd', 'a', 'g', 'h']
+
+pw : ['b', 'e', 'c', 'f', 'd', 'a', 'g', 'h']
+line: rotate based on position of letter h
+pw : ['d', 'a', 'g', 'h', 'b', 'e', 'c', 'f']
+
+pw : ['d', 'a', 'g', 'h', 'b', 'e', 'c', 'f']
+line: rotate based on position of letter e
+pw : ['h', 'b', 'e', 'c', 'f', 'd', 'a', 'g']
+
+pw : ['h', 'b', 'e', 'c', 'f', 'd', 'a', 'g']
+line: rotate left 3 steps
+pw : ['d', 'a', 'g', 'h', 'b', 'e', 'c', 'f']
+
+pw : ['d', 'a', 'g', 'h', 'b', 'e', 'c', 'f']
+line: reverse positions 0 through 7
+pw : ['f', 'c', 'e', 'b', 'h', 'g', 'a', 'd']
+
+pw : ['f', 'c', 'e', 'b', 'h', 'g', 'a', 'd']
+line: move position 5 to position 4
+pw : ['f', 'c', 'e', 'b', 'g', 'h', 'a', 'd']
+
+pw : ['f', 'c', 'e', 'b', 'g', 'h', 'a', 'd']
+line: swap letter a with letter b
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'b', 'd']
+
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'b', 'd']
+line: rotate based on position of letter d
+pw : ['g', 'h', 'b', 'd', 'f', 'c', 'e', 'a']
+
+pw : ['g', 'h', 'b', 'd', 'f', 'c', 'e', 'a']
+line: rotate left 6 steps
+pw : ['b', 'd', 'f', 'c', 'e', 'a', 'g', 'h']
+
+pw : ['b', 'd', 'f', 'c', 'e', 'a', 'g', 'h']
+line: rotate right 2 steps
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'b', 'd']
+
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'b', 'd']
+line: move position 6 to position 7
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'd', 'b']
+
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'd', 'b']
+line: rotate left 0 steps
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'd', 'b']
+
+pw : ['f', 'c', 'e', 'a', 'g', 'h', 'd', 'b']
+line: rotate left 4 steps
+pw : ['g', 'h', 'd', 'b', 'f', 'c', 'e', 'a']
+
+pw : ['g', 'h', 'd', 'b', 'f', 'c', 'e', 'a']
+line: swap letter a with letter e
+pw : ['g', 'h', 'd', 'b', 'f', 'c', 'a', 'e']
+
+pw : ['g', 'h', 'd', 'b', 'f', 'c', 'a', 'e']
+line: rotate based on position of letter c
+pw : ['b', 'f', 'c', 'a', 'e', 'g', 'h', 'd']
+
+pw : ['b', 'f', 'c', 'a', 'e', 'g', 'h', 'd']
+line: rotate right 2 steps
+pw : ['c', 'a', 'e', 'g', 'h', 'd', 'b', 'f']
+
+pw : ['c', 'a', 'e', 'g', 'h', 'd', 'b', 'f']
+line: swap letter e with letter b
+pw : ['c', 'a', 'b', 'g', 'h', 'd', 'e', 'f']
+
+pw : ['c', 'a', 'b', 'g', 'h', 'd', 'e', 'f']
+line: rotate based on position of letter f
+pw : ['h', 'd', 'e', 'f', 'c', 'a', 'b', 'g']
+
+pw : ['h', 'd', 'e', 'f', 'c', 'a', 'b', 'g']
+line: rotate left 0 steps
+pw : ['h', 'd', 'e', 'f', 'c', 'a', 'b', 'g']
+
+pw : ['h', 'd', 'e', 'f', 'c', 'a', 'b', 'g']
+line: rotate right 5 steps
+pw : ['a', 'b', 'g', 'h', 'd', 'e', 'f', 'c']
+
+pw : ['a', 'b', 'g', 'h', 'd', 'e', 'f', 'c']
+line: reverse positions 0 through 5
+pw : ['e', 'd', 'h', 'g', 'b', 'a', 'f', 'c']
+
+pw : ['e', 'd', 'h', 'g', 'b', 'a', 'f', 'c']
+line: swap position 4 with position 7
+pw : ['e', 'd', 'h', 'g', 'c', 'a', 'f', 'b']
+
+pw : ['e', 'd', 'h', 'g', 'c', 'a', 'f', 'b']
+line: rotate based on position of letter c
+pw : ['b', 'e', 'd', 'h', 'g', 'c', 'a', 'f']
+
+pw : ['b', 'e', 'd', 'h', 'g', 'c', 'a', 'f']
+line: swap letter e with letter h
+pw : ['b', 'h', 'd', 'e', 'g', 'c', 'a', 'f']
+
+pw : ['b', 'h', 'd', 'e', 'g', 'c', 'a', 'f']
+line: swap position 3 with position 5
+pw : ['b', 'h', 'd', 'c', 'g', 'e', 'a', 'f']
+
+pw : ['b', 'h', 'd', 'c', 'g', 'e', 'a', 'f']
+line: move position 0 to position 6
+pw : ['a', 'b', 'h', 'd', 'c', 'g', 'e', 'f']
+
+pw : ['a', 'b', 'h', 'd', 'c', 'g', 'e', 'f']
+line: reverse positions 3 through 6
+pw : ['a', 'b', 'h', 'e', 'g', 'c', 'd', 'f']
+
+pw : ['a', 'b', 'h', 'e', 'g', 'c', 'd', 'f']
+line: rotate right 4 steps
+pw : ['g', 'c', 'd', 'f', 'a', 'b', 'h', 'e']
+
+pw : ['g', 'c', 'd', 'f', 'a', 'b', 'h', 'e']
+line: move position 4 to position 7
+pw : ['g', 'c', 'd', 'f', 'e', 'a', 'b', 'h']
+
+pw : ['g', 'c', 'd', 'f', 'e', 'a', 'b', 'h']
+line: swap position 1 with position 4
+pw : ['g', 'e', 'd', 'f', 'c', 'a', 'b', 'h']
+
+pw : ['g', 'e', 'd', 'f', 'c', 'a', 'b', 'h']
+line: reverse positions 3 through 5
+pw : ['g', 'e', 'd', 'a', 'c', 'f', 'b', 'h']
+
+pw : ['g', 'e', 'd', 'a', 'c', 'f', 'b', 'h']
+line: swap position 1 with position 7
+pw : ['g', 'h', 'd', 'a', 'c', 'f', 'b', 'e']
+
+pw : ['g', 'h', 'd', 'a', 'c', 'f', 'b', 'e']
+line: move position 2 to position 3
+pw : ['g', 'h', 'a', 'd', 'c', 'f', 'b', 'e']
+
+pw : ['g', 'h', 'a', 'd', 'c', 'f', 'b', 'e']
+line: swap letter f with letter c
+pw : ['g', 'h', 'a', 'd', 'f', 'c', 'b', 'e']
+
+pw : ['g', 'h', 'a', 'd', 'f', 'c', 'b', 'e']
+line: move position 7 to position 1
+pw : ['g', 'a', 'd', 'f', 'c', 'b', 'e', 'h']
+
+pw : ['g', 'a', 'd', 'f', 'c', 'b', 'e', 'h']
+line: move position 1 to position 6
+pw : ['g', 'e', 'a', 'd', 'f', 'c', 'b', 'h']
+
+pw : ['g', 'e', 'a', 'd', 'f', 'c', 'b', 'h']
+line: swap letter b with letter d
+pw : ['g', 'e', 'a', 'b', 'f', 'c', 'd', 'h']
+
+pw : ['g', 'e', 'a', 'b', 'f', 'c', 'd', 'h']
+line: move position 2 to position 4
+pw : ['g', 'e', 'f', 'a', 'b', 'c', 'd', 'h']
+
+pw : ['g', 'e', 'f', 'a', 'b', 'c', 'd', 'h']
+line: rotate based on position of letter b
+pw : ['h', 'g', 'e', 'f', 'a', 'b', 'c', 'd']
+
+pw : ['h', 'g', 'e', 'f', 'a', 'b', 'c', 'd']
+line: rotate based on position of letter c
+pw : ['h', 'g', 'e', 'f', 'a', 'b', 'c', 'd']
+
+pw : ['h', 'g', 'e', 'f', 'a', 'b', 'c', 'd']
+line: reverse positions 3 through 6
+pw : ['h', 'g', 'e', 'c', 'b', 'a', 'f', 'd']
+
+pw : ['h', 'g', 'e', 'c', 'b', 'a', 'f', 'd']
+line: move position 6 to position 3
+pw : ['h', 'g', 'e', 'b', 'a', 'f', 'c', 'd']
+
+pw : ['h', 'g', 'e', 'b', 'a', 'f', 'c', 'd']
+line: rotate based on position of letter f
+pw : ['b', 'a', 'f', 'c', 'd', 'h', 'g', 'e']
+
+pw : ['b', 'a', 'f', 'c', 'd', 'h', 'g', 'e']
+line: move position 1 to position 0
+pw : ['a', 'b', 'f', 'c', 'd', 'h', 'g', 'e']
+
+pw : ['a', 'b', 'f', 'c', 'd', 'h', 'g', 'e']
+line: reverse positions 1 through 2
+pw : ['a', 'f', 'b', 'c', 'd', 'h', 'g', 'e']
+
+pw : ['a', 'f', 'b', 'c', 'd', 'h', 'g', 'e']
+line: swap letter f with letter h
+pw : ['a', 'h', 'b', 'c', 'd', 'f', 'g', 'e']
+
+pw : ['a', 'h', 'b', 'c', 'd', 'f', 'g', 'e']
+line: reverse positions 0 through 4
+pw : ['d', 'c', 'b', 'h', 'a', 'f', 'g', 'e']
+
+pw : ['d', 'c', 'b', 'h', 'a', 'f', 'g', 'e']
+line: rotate right 7 steps
+pw : ['e', 'd', 'c', 'b', 'h', 'a', 'f', 'g']
+
+pw : ['e', 'd', 'c', 'b', 'h', 'a', 'f', 'g']
+line: rotate based on position of letter c
+pw : ['f', 'g', 'e', 'd', 'c', 'b', 'h', 'a']
+
+pw : ['f', 'g', 'e', 'd', 'c', 'b', 'h', 'a']
+line: rotate right 7 steps
+pw : ['a', 'f', 'g', 'e', 'd', 'c', 'b', 'h']
+
+pw : ['a', 'f', 'g', 'e', 'd', 'c', 'b', 'h']
+line: reverse positions 1 through 6
+pw : ['a', 'b', 'c', 'd', 'e', 'g', 'f', 'h']
+
+pw : ['a', 'b', 'c', 'd', 'e', 'g', 'f', 'h']
+line: swap position 5 with position 6
+pw : ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+
+result: abcdefgh
+time: 0.000653
